@@ -57,6 +57,7 @@ const Search = () => {
           <div className="flex flex-col my-2">
             <label>Destination</label>
             <select className="border rounded-md p-2">
+              <option>Maldives</option>
               <option value="">Canada</option>
               <option>United Kingdom</option>
               <option>Australia</option>
