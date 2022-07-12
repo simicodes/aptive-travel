@@ -6,17 +6,23 @@ import Navbar from "./components/Navbar";
 import Search from "./components/Search";
 import Select from "./components/Select";
 
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 function App() {
   return (
-    <div>
-      <Navbar />
-      <Hero />
-      <Destinations />
-      <Search />
-      <Select />
-      <Carousel />
-      <Footer />
-    </div>
+    <>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Hero />} />
+          <Route path="/destinations" element={<Destinations />} />
+        </Routes>
+
+        <Search />
+        <Select />
+        <Carousel />
+        <Footer />
+      </Router>
+    </>
   );
 }
 

@@ -10,6 +10,8 @@ import {
   FaYoutube,
   FaPinterest,
 } from "react-icons/fa";
+
+import {Link} from "react-router-dom"
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
   const [logo, setLogo] = useState(false);
@@ -27,8 +29,12 @@ const Navbar = () => {
         </h1>
       </div>
       <ul className="hidden md:flex">
-        <li>Home</li>
-        <li>Destinations</li>
+        <Link to="/">
+          <li>Home</li>
+        </Link>
+        <Link to="/destinations">
+          <li>Destinations</li>
+        </Link>
         <li>Travel</li>
         <li>View</li>
         <li>Book</li>
@@ -59,8 +65,12 @@ const Navbar = () => {
       >
         <ul>
           <h1>BEACHES.</h1>
-          <li className="border-b">Home</li>
-          <li className="border-b">Destinations</li>
+          <Link to="/">
+            <li className="border-b">Home</li>
+          </Link>
+          <Link to="/destinations">
+            <li className="border-b">Destinations</li>
+          </Link>
           <li className="border-b">Travel</li>
           <li className="border-b">View</li>
           <li className="border-b">Book</li>
